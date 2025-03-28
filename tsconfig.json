@@ -5,6 +5,14 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "strict": true,
+    "paths": {
+      "hello-world-no-ngrx": [
+        "./dist/hello-world-no-ngrx"
+      ],
+      "hello-world-with-ngrx": [
+        "./dist/hello-world-with-ngrx"
+      ]
+    },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

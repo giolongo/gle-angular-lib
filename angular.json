@@ -3,5 +3,71 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "hello-world-no-ngrx": {
+      "projectType": "library",
+      "root": "projects/hello-world-no-ngrx",
+      "sourceRoot": "projects/hello-world-no-ngrx/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/hello-world-no-ngrx/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/hello-world-no-ngrx/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/hello-world-no-ngrx/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/hello-world-no-ngrx/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "hello-world-with-ngrx": {
+      "projectType": "library",
+      "root": "projects/hello-world-with-ngrx",
+      "sourceRoot": "projects/hello-world-with-ngrx/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/hello-world-with-ngrx/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/hello-world-with-ngrx/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/hello-world-with-ngrx/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/hello-world-with-ngrx/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }
